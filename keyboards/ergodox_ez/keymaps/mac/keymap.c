@@ -18,13 +18,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L2  |   Y  |   U  |   I  |   O  |   P  | BkSp   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  ;:  | Enter  |
- * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------| LGui |           | RGui |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |  /?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |ESC/L1| Alt  | Cmd  | Alt  | Cmd  |                                       |'"/L2 |  \|  |  [{  |  ]}  |        |
+ *   |ESC/L1| Alt  | LGui | Alt  | LGui |                                       |'"/L2 |  \|  |  [{  |  ]}  |        |
  *   `----------------------------------'                                       `------------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  %   | LGui |       | Alt  |  "   |
+ *                                        |  %   | LAlt |       | RAlt |  "   |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
  *                                 |Space | ESC  |------|       |------|  Tab   | Caps |
@@ -36,21 +36,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,          KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_TRNS,
   KC_TAB,          KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    TG(SYMB),
   KC_LCTRL,        KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
-  KC_LSFT,         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),
+  KC_LSFT,         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LGUI,
   LT(SYMB,KC_ESC), KC_LALT, KC_LGUI, KC_LALT, KC_LGUI,
-                                                       KC_PERC, KC_LGUI,
+                                                       KC_PERC, KC_LALT,
                                                                 KC_HOME,
                                                KC_SPC, KC_ESC,  KC_END,
 
                    // right hand
-                   KC_EQL,       KC_6,    KC_7,             KC_8,    KC_9,    KC_0,    KC_MINS,
-                   TG(MDIA),     KC_Y,    KC_U,             KC_I,    KC_O,    KC_P,    KC_BSPC,
-                                 KC_H,    KC_J,             KC_K,    KC_L,    KC_SCLN, KC_ENT,
-                   MEH_T(KC_NO), KC_N,    KC_M,             KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-                                          LT(MDIA,KC_QUOT), KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
-                   KC_LALT, KC_DQUO,
+                   KC_EQL,   KC_6,    KC_7,             KC_8,    KC_9,    KC_0,    KC_MINS,
+                   TG(MDIA), KC_Y,    KC_U,             KC_I,    KC_O,    KC_P,    KC_BSPC,
+                             KC_H,    KC_J,             KC_K,    KC_L,    KC_SCLN, KC_ENT,
+                   KC_RGUI,  KC_N,    KC_M,             KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+                                      LT(MDIA,KC_QUOT), KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
+                   KC_RALT,  KC_DQUO,
                    KC_PGUP,
-                   KC_PGDN, KC_TAB, KC_CAPS
+                   KC_PGDN,  KC_TAB,  KC_CAPS
 ),
 /* Keymap 1: Symbol Layer
  *
@@ -66,10 +66,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |       |      |      |      |      |                                       |   0  |   0  |   .  |   =   |      |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |Animat|Reset |       |Toggle|      |
+ *                                        |      |Reset |       |      |      |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |Bright|Bright|      |       |      |Hue-  |Hue+  |
- *                                 |ness- |ness+ |------|       |------|      |      |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |------|       |------|      |      |
  *                                 |      |      |      |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -80,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS, KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,
   KC_TRNS, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_TRNS,
   KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                               RGB_MOD, RESET,
+                                               KC_TRNS, RESET,
                                                         KC_TRNS,
-                                      RGB_VAD, RGB_VAI, KC_TRNS,
+                                      KC_TRNS, KC_TRNS, KC_TRNS,
 
            // right hand
            KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_SLASH, KC_F10,
@@ -90,9 +90,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     KC_DOWN, KC_4,    KC_5,    KC_6,    KC_MINUS, KC_F12,
            KC_TRNS, KC_AMPR, KC_1,    KC_2,    KC_3,    KC_PLUS,  KC_TRNS,
                              KC_0,    KC_0,    KC_DOT,  KC_EQL,   KC_TRNS,
-           RGB_TOG, KC_TRNS,
+           KC_TRNS, KC_TRNS,
            KC_TRNS,
-           KC_TRNS, RGB_HUD, RGB_HUI
+           KC_TRNS, KC_TRNS, KC_TRNS
 ),
 /* Keymap 2: Media and mouse keys
  *
