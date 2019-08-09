@@ -157,6 +157,7 @@ void matrix_init_user(void) {
 // Runs whenever there is a layer state change.
 uint32_t layer_state_set_user(uint32_t state) {
   ergodox_board_led_off();
+  ergodox_led_all_set(LED_BRIGHTNESS_LO);
   ergodox_right_led_1_off();
   ergodox_right_led_2_off();
   ergodox_right_led_3_off();
