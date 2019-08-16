@@ -145,37 +145,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab    |   Q  |   W  |   E  |   R  |   T  | BkSp |           |      |   Y  |   U  |   I  |   O  |   P  | BkSp   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  ;:  | Enter  |
- * |--------+------+------+------+------+------| LGui |           | RGui |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|Enter |           | RGui |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |  /?  | RShift |
  * `--------+------+------+------+------+------+------'           `-------------+------+------+------+------+--------'
- *   |ESC/L1|S+G+A | G+A  | Alt  | LGui |                                       |'"/L2 |  \|  |  [{  |  ]}  |      |
+ *   | ESC  |S+G+A | G+A  | Alt  | LGui |                                       |  '"  |  \|  |  [{  |  ]}  |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  %   |  L1  |       |  L2  |  "   |
+ *                                        |   I  |   P  |       |      |  "   |
  *                                 ,------+------+------|       |------+------+------.
- *                                 |      |      | PgUp |       |  +   |      |      |
- *                                 |Space | ESC  |------|       |------| Tab  | Caps |
- *                                 |      |      | PgDn |       |  -   |      |      |
+ *                                 |      |      |   U  |       |  +   |      |      |
+ *                                 |Space | LGui |------|       |------| Tab  | Caps |
+ *                                 |      |      |   M  |       |  -   |      |      |
  *                                 `--------------------'       `--------------------'
  */
 [DSIN] = LAYOUT_ergodox(
   // left hand
-  KC_ESC,          KC_1,          KC_2,          KC_3,    KC_4,    KC_5,    KC_TRNS,
-  KC_TAB,          KC_Q,          KC_W,          KC_E,    KC_R,    KC_T,    KC_BSPC,
-  KC_LCTRL,        KC_A,          KC_S,          KC_D,    KC_F,    KC_G,
-  KC_LSFT,         KC_Z,          KC_X,          KC_C,    KC_V,    KC_B,    KC_LGUI,
-  LT(SYMB,KC_ESC), SGUI(KC_LALT), LGUI(KC_LALT), KC_LALT, KC_LGUI,
-                                                                   KC_PERC, TG(SYMB),
-                                                                            KC_PGUP,
-                                                          KC_SPC,  KC_ESC,  KC_PGDN,
+  KC_ESC,   KC_1,          KC_2,          KC_3,    KC_4,    KC_5,    KC_TRNS,
+  KC_TAB,   KC_Q,          KC_W,          KC_E,    KC_R,    KC_T,    KC_BSPC,
+  KC_LCTRL, KC_A,          KC_S,          KC_D,    KC_F,    KC_G,
+  KC_LSFT,  KC_Z,          KC_X,          KC_C,    KC_V,    KC_B,    KC_ENT,
+  KC_ESC,   SGUI(KC_LALT), LGUI(KC_LALT), KC_LALT, KC_LGUI,
+                                                            KC_I,    KC_P,
+                                                                     KC_U,
+                                                   KC_SPC,  KC_LGUI, KC_M,
 
                    // right hand
-                   KC_EQL,   KC_6,    KC_7,             KC_8,    KC_9,    KC_0,    KC_MINS,
-                   KC_TRNS,  KC_Y,    KC_U,             KC_I,    KC_O,    KC_P,    KC_BSPC,
-                             KC_H,    KC_J,             KC_K,    KC_L,    KC_SCLN, KC_ENT,
-                   KC_RGUI,  KC_N,    KC_M,             KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-                                      LT(MDIA,KC_QUOT), KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
-                   TG(MDIA), KC_DQUO,
+                   KC_EQL,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
+                   KC_TRNS,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
+                             KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,
+                   KC_RGUI,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+                                      KC_QUOT, KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
+                   KC_TRNS,  KC_DQUO,
                    KC_PLUS,
                    KC_MINUS, KC_TAB,  KC_CAPS
 ),
