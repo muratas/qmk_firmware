@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 1: Symbols
  *
  * ,---------------------------------------------------.           ,------------------------------------------------.
- * | Version |      |      |      |      |      |      |           | F12  |      |      |      |   (  |   )  |  `~   |
+ * | Version |      |      |      |      |      |      |           | F12  |      |      |  -_  |  =+  |  \|  |  `~   |
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+-------|
- * | Reset   |   7  |   8  |   9  |      |      |      |           |      |      |      |      |   {  |   }  |  \|   |
+ * | Reset   |   7  |   8  |   9  |      |      |      |           |      |      |      |      |   {  |   }  |  [{   |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+-------|
  * |         |   4  |   5  |   6  |      |      |------|           |------|      |      |      |   [  |   ]  |  '"   |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+-------|
@@ -86,8 +86,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       KC_TRNS, KC_TRNS, KC_TRNS,
 
            // right hand
-           KC_F12,  KC_TRNS, KC_TRNS, KC_TRNS, KC_LPRN, KC_RPRN, KC_GRV,
-           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_BSLS,
+           KC_F12,  KC_TRNS, KC_TRNS, KC_TRNS, KC_MINS, KC_BSLS, KC_GRV,
+           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_LBRC,
                     KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_QUOT,
            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
