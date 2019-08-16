@@ -176,8 +176,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    KC_RGUI,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
                                       KC_QUOT, KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
                    KC_TRNS,        KC_DQUO,
-                   SGUI(KC_PLUS),
-                   SGUI(KC_MINUS), KC_TAB,  KC_CAPS
+                   LGUI(KC_PLUS),
+                   LGUI(KC_MINUS), KC_TAB,  KC_CAPS
 ),
 };
 
