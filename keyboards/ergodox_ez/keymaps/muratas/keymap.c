@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab    |   Q  |   W  |   E  |   R  |   T  | BkSp |           |      |   Y  |   U  |   I  |   O  |   P  | BkSp   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  ;:  | Enter  |
- * |--------+------+------+------+------+------| LGui |           | RGui |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|Enter |           | RGui |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |  /?  | RShift |
  * `--------+------+------+------+------+------+------'           `-------------+------+------+------+------+--------'
  *   |ESC/L1|S+G+A | G+A  | Alt  | LGui |                                       |'"/L2 |  \|  |  [{  |  ]}  |      |
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,          KC_1,          KC_2,          KC_3,    KC_4,    KC_5,    TG(DSIN),
   KC_TAB,          KC_Q,          KC_W,          KC_E,    KC_R,    KC_T,    KC_BSPC,
   KC_LCTRL,        KC_A,          KC_S,          KC_D,    KC_F,    KC_G,
-  KC_LSFT,         KC_Z,          KC_X,          KC_C,    KC_V,    KC_B,    KC_LGUI,
+  KC_LSFT,         KC_Z,          KC_X,          KC_C,    KC_V,    KC_B,    KC_ENT,
   LT(SYMB,KC_ESC), SGUI(KC_LALT), LGUI(KC_LALT), KC_LALT, KC_LGUI,
                                                                    KC_PERC, TG(SYMB),
                                                                             KC_PGUP,
