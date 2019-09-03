@@ -14,12 +14,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | ESC    |  1!  |  2@  |  3#  |  4$  |  5%  |      |           |  =+  |  6^  |  7&  |  8*  |  9(  |  0)  |  -_    |
+ * | ESC    |  1!  |  2@  |  3#  |  4$  |  5%  |      |           |      |  6^  |  7&  |  8*  |  9(  |  0)  |  -_    |
  * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  | BkSp |           |      |   Y  |   U  |   I  |   O  |   P  | BkSp   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  ;:  | Enter  |
- * |--------+------+------+------+------+------|  L3  |           | RGui |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|  L3  |           |  =+  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |  /?  | RShift |
  * `--------+------+------+------+------+------+------'           `-------------+------+------+------+------+--------'
  *   |ESC/L1|S+G+A | G+A  | Alt  | LGui |                                       |'"/L2 |  \|  |  [{  |  ]}  |      |
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        |  %   |  L1  |       |  L2  |  "   |
  *                                 ,------+------+------|       |------+------+------.
  *                                 |      |      | PgUp |       |  +   |      |      |
- *                                 |Space | ESC  |------|       |------| Tab  | Caps |
+ *                                 |Space | ESC  |------|       |------|  '"  | Caps |
  *                                 |      |      | PgDn |       |  -   |      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -44,14 +44,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                           KC_SPC,  KC_ESC,  KC_PGDN,
 
                    // right hand
-                   KC_EQL,   KC_6,    KC_7,             KC_8,    KC_9,    KC_0,    KC_MINS,
+                   KC_TRNS,  KC_6,    KC_7,             KC_8,    KC_9,    KC_0,    KC_MINS,
                    KC_TRNS,  KC_Y,    KC_U,             KC_I,    KC_O,    KC_P,    KC_BSPC,
                              KC_H,    KC_J,             KC_K,    KC_L,    KC_SCLN, KC_ENT,
-                   KC_RGUI,  KC_N,    KC_M,             KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+                   KC_EQL,   KC_N,    KC_M,             KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
                                       LT(MDIA,KC_QUOT), KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
                    TG(MDIA), KC_DQUO,
                    KC_PLUS,
-                   KC_MINUS, KC_TAB,  KC_CAPS
+                   KC_MINUS, KC_QUOT, KC_CAPS
 ),
 /* Keymap 1: Symbols
  *
