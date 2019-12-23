@@ -154,20 +154,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        |   I  |   P  |       |      |  "   |
  *                                 ,------+------+------|       |------+------+------.
  *                                 |      |      |   L  |       |GUI++ |      |      |
- *                                 |Space |S+G+[ |------|       |------| Tab  | Caps |
+ *                                 |Space |   M  |------|       |------| Tab  | Caps |
  *                                 |      |      |   -  |       |GUI+- |      |      |
  *                                 `--------------------'       `--------------------'
  */
 [DSIN] = LAYOUT_ergodox(
   // left hand
-  KC_ESC,   KC_1,          KC_2,          KC_3,    KC_4,    KC_5,    LGUI(KC_PLUS),
-  KC_TAB,   KC_Q,          KC_W,          KC_E,    KC_R,    KC_T,    LGUI(KC_MINUS),
-  KC_LCTRL, KC_A,          KC_S,          KC_D,    KC_F,    KC_G,
-  KC_LSFT,  KC_Z,          KC_X,          KC_C,    KC_V,    KC_B,    KC_TRNS,
+  KC_ESC,   KC_1,          KC_2,          KC_3,    KC_4,     KC_5, LGUI(KC_PLUS),
+  KC_TAB,   KC_Q,          KC_W,          KC_E,    KC_R,     KC_T, LGUI(KC_MINUS),
+  KC_LCTRL, KC_A,          KC_S,          KC_D,    KC_F,     KC_G,
+  KC_LSFT,  KC_Z,          KC_X,          KC_C,    KC_V,     KC_B, KC_TRNS,
   KC_ESC,   SGUI(KC_LALT), LGUI(KC_LALT), KC_LALT, KC_LGUI,
-                                                            KC_I,    KC_P,
-                                                                     KC_L,
-                                            KC_SPACE, SGUI(KC_LBRC), KC_MINUS,
+                                                             KC_I, KC_P,
+                                                                   KC_L,
+                                                   KC_SPACE, KC_M, KC_MINUS,
 
                    // right hand
                    KC_EQL,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
