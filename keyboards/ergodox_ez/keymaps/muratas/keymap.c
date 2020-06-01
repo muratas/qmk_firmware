@@ -153,9 +153,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        |   I  |   P  |       |      |  "   |
  *                                 ,------+------+------|       |------+------+------.
- *                                 |      |      |GUI+} |       |GUI++ |      |      |
+ *                                 |      |      |S+G+} |       |GUI++ |      |      |
  *                                 |Space |   M  |------|       |------| Tab  | Caps |
- *                                 |      |      |GUI+{ |       |GUI+- |      |      |
+ *                                 |      |      |S+G+{ |       |GUI+- |      |      |
  *                                 `--------------------'       `--------------------'
  */
 [DSIN] = LAYOUT_ergodox(
@@ -166,8 +166,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LSFT,      KC_Z,          KC_X,          KC_C,    KC_V,     KC_B, KC_TRNS,
   LGUI(KC_L),   SGUI(KC_LALT), LGUI(KC_LALT), KC_LALT, KC_LGUI,
                                                                  KC_I, KC_P,
-                                                                       LGUI(KC_RBRC),
-                                                       KC_SPACE, KC_M, LGUI(KC_LBRC),
+                                                                       SGUI(KC_RBRC),
+                                                       KC_SPACE, KC_M, SGUI(KC_LBRC),
 
                    // right hand
                    KC_EQL,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
