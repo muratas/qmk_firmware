@@ -25,10 +25,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |ESC/L1|S+G+A | G+A  | Alt  | LGui |                                       |'"/L2 |  \|  |  [{  |  ]}  |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  %   |  L1  |       |  L2  |  "   |
+ *                                        |  %   |  L1  |       |  L2  | Home |
  *                                 ,------+------+------|       |------+------+------.
  *                                 |      |      | PgUp |       |  +   |      |      |
- *                                 |Space | ESC  |------|       |------|  '"  | Caps |
+ *                                 |Space | ESC  |------|       |------| End  | Caps |
  *                                 |      |      | PgDn |       |  -   |      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -49,9 +49,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                              KC_H,    KC_J,             KC_K,    KC_L,    KC_SCLN, KC_ENT,
                    KC_EQL,   KC_N,    KC_M,             KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
                                       LT(MDIA,KC_QUOT), KC_BSLS, KC_LBRC, KC_RBRC, KC_TRNS,
-                   TG(MDIA), KC_DQUO,
+                   TG(MDIA), KC_HOME,
                    KC_PLUS,
-                   KC_MINUS, KC_QUOT, KC_CAPS
+                   KC_MINUS, KC_END,  KC_CAPS
 ),
 /* Keymap 1: Symbols
  *
